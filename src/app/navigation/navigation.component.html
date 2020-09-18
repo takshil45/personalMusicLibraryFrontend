@@ -1,0 +1,7 @@
+<mat-toolbar [class.hideAdmin]="!userIsLoggedIn" color="primary">
+  <h2 class="mat-headline" fxShow="true">Welcome</h2>
+  <div fxShow="true" fxHide.lt-md="true">
+    <!-- <button mat-button routerLink="/dashboard/contact">Contact</button> -->
+    <button mat-button (click)="logout()">Logout</button>
+  </div>
+</mat-toolbar>

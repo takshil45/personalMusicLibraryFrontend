@@ -1,0 +1,23 @@
+<mat-card>
+  <div>
+    <div class="row">
+      <div class="header">
+        <mat-card-title><h2>Artist Dashboard</h2></mat-card-title>
+      </div>
+      <br>
+      <mat-card-content>
+        <table class="songsTable">
+          <tr>
+            <th (click)="sort('name')">Artist Name</th>
+            <th (click)="sort('userCount')">Users Count</th>
+          </tr>
+          <tr *ngFor = "let artist of artists">
+            <td>{{artist.name}}</td>
+            <td>{{artist.userCount}}</td>
+          </tr>
+        </table>
+      </mat-card-content>
+    </div>
+  </div>
+</mat-card>
+

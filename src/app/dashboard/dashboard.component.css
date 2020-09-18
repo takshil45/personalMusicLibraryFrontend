@@ -1,0 +1,12 @@
+.profile-card { 
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    display: flex;
+}
+

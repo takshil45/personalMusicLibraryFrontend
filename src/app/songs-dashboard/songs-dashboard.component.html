@@ -1,0 +1,24 @@
+<mat-card>
+  <div>
+    <div class="row">
+      <div class="header">
+        <mat-card-title><h2>Songs Dashboard</h2></mat-card-title>
+      </div>
+      <br>
+      <mat-card-content>
+        <table class="songsTable">
+          <tr>
+            <th (click)="sort('name')">Song Name</th>
+            <th (click)="sort('artist')">Artist Name</th>
+            <th (click)="sort('userCount')">Users Count</th>
+          </tr>
+          <tr *ngFor = "let song of songs">
+            <td>{{song.name}}</td>
+            <td>{{song.artist.name}}</td>
+            <td>{{song.userCount}}</td>
+          </tr>
+        </table>
+      </mat-card-content>
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,58 @@
+<app-navigation></app-navigation>
+<div class="container" style="margin-top: 20px; margin-bottom: 20px">
+  <div>
+    <form [formGroup]="form">
+    <table id="addSong">
+        <tr>
+            <!--<td>
+                <input matInput placeholder="Song Name" formControlName="songName" type="text">
+                <div class="invalid" *ngIf="clickedAdd=== true && f.songName.errors">
+                    *Song Name is required
+                </div>
+
+                 <mat-form-field class="example-full-width">
+                  <input type="text"
+                        placeholder="Pick one"
+                        aria-label="Number"
+                        matInput
+                        formControlName="name"
+                        [matAutocomplete]="auto">
+                  <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of songs" [value]="option.name">
+                      {{option.name}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field> 
+            </td>-->
+            <td>
+              <input matInput placeholder="Song Name" formControlName="songName" type="text">
+              <div class="invalid" *ngIf="clickedAdd=== true && f.songName.errors">
+                  *Name is required
+              </div>
+             </td>
+             <td>
+              <input matInput placeholder="Artist Name" formControlName="artistName" type="text">
+              <div class="invalid" *ngIf="clickedAdd=== true && f.artistName.errors">
+                  *Name is required
+              </div>
+             </td>
+            
+            <td>
+              <div class="button-row">
+                <button mat-raised-button color="primary" (click)="addButton(form.value)">Add Song</button>
+              </div>
+            </td>
+        </tr>
+    </table>
+  </form>
+  </div>
+</div>
+<div class="container" style="margin-top: 20px; margin-bottom: 20px">
+  <div class="profile-card" fxFlex="50%">
+    <app-artist-dashboard [artists] = "artists"></app-artist-dashboard>
+  </div>
+  <div class="profile-card" fxFlex="50%">
+    <app-songs-dashboard [songs] = "songs"></app-songs-dashboard>
+  </div>
+</div>
+

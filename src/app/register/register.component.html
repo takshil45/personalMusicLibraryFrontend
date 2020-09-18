@@ -1,0 +1,51 @@
+<div class="login-container alternative">
+    <div class="row">
+            <form [formGroup]="form">
+                <div class="header">
+                    <h2>Register</h2>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td><label for="name">Name</label></td>
+                            <td>
+                                <input matInput placeholder="Name" formControlName="name" type="text">
+                                <div class="invalid" *ngIf="clickedRegister=== true && f.name.errors">
+                                    *Name is required
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td>
+                                <input matInput placeholder="Email" formControlName="email" type="email">
+                                <div class="invalid" *ngIf="clickedRegister=== true && f.email.errors">
+                                    *Email is required
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Password</label></td>
+                            <td>
+                                <input matInput placeholder="Password" formControlName="password" type="password">
+                                <div class="invalid" *ngIf="clickedRegister=== true && f.password.errors">
+                                    *Password is required
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <div class="button-row">
+                                <button mat-raised-button color="primary" (click)="registerButton(form.value)">Register</button>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div style="text-align: center; font-size: 12px;">
+                                <p>Already a User? <span style="font-weight: bold; font-style: italic; cursor: pointer;" routerLink = "../login">Log in</span></p>
+                            </div>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+    </div>
+    
+</div>

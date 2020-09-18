@@ -1,0 +1,158 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$md-twsblue: (
+    50 : #e9eff7,
+    100 : #c9d7ec,
+    200 : #a5bddf,
+    300 : #80a3d2,
+    400 : #658fc8,
+    500 : #4a7bbe,
+    600 : #4373b8,
+    700 : #3a68af,
+    800 : #325ea7,
+    900 : #224b99,
+    A100 : #d6e3ff,
+    A200 : #a3c0ff,
+    A400 : #709dff,
+    A700 : #578cff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-twsgrey: (
+    50 : #efefef,
+    100 : #d6d7d7,
+    200 : #bbbcbd,
+    300 : #9fa1a2,
+    400 : #8b8c8e,
+    500 : #76787a,
+    600 : #6e7072,
+    700 : #636567,
+    800 : #595b5d,
+    900 : #46484a,
+    A100 : #b3d5f8,
+    A200 : #84bcf4,
+    A400 : #46a2ff,
+    A700 : #2c96ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-twsred: (
+    50 : #f7eae9,
+    100 : #eccbc9,
+    200 : #dfa9a5,
+    300 : #d28780,
+    400 : #c86d65,
+    500 : #be534a,
+    600 : #b84c43,
+    700 : #af423a,
+    800 : #a73932,
+    900 : #992922,
+    A100 : #ffd8d6,
+    A200 : #ffa8a3,
+    A400 : #ff7770,
+    A700 : #ff5f57,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-twsdark: (
+    50 : #e5e8ec,
+    100 : #bec5cf,
+    200 : #929eaf,
+    300 : #66778f,
+    400 : #465a77,
+    500 : #253d5f,
+    600 : #213757,
+    700 : #1b2f4d,
+    800 : #162743,
+    900 : #0d1a32,
+    A100 : #6e9aff,
+    A200 : #3b76ff,
+    A400 : #0852ff,
+    A700 : #0047ee,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+// mandatory stuff for theming
+$tws-primary: mat-palette($md-twsblue);
+$tws-accent:  mat-palette($md-twsgrey);
+$tws-warn: mat-palette($md-twsred);
+
+// include the custom theme components into a theme object
+$tws-theme: mat-light-theme($tws-primary, $tws-accent, $tws-warn);
+
+// include the custom theme object into the angular material theme
+@include angular-material-theme($tws-theme);
+
+// alt theme
+$alt-primary: mat-palette($md-twsdark);
+$alt-accent: mat-palette($md-twsdark);
+
+// include the custom theme components into a theme object
+$alt-theme: mat-dark-theme($alt-primary, $alt-accent);
+
+
+.alternative {
+    @include mat-button-theme($alt-theme);
+}

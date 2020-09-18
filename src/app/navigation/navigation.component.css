@@ -1,0 +1,58 @@
+
+.mat-toolbar {
+    height: 35px;
+  }
+  
+  mat-sidenav-container {
+      width: 100%;
+    }
+  
+  h1.mat-headline, h2.mat-headline {
+    font-size: 14px;
+  }
+  
+    
+    mat-sidenav {
+      width: 150px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    .spacer {
+      flex: 1 1 auto;
+    }
+    
+    .mat-nav-list .mat-list-item {
+      height: 60px;
+      font-size: 12px;
+      opacity: .7; 
+    }
+    
+    .mat-menu-item {
+      font-size: 12px;
+    }
+    
+    img {
+      height: 40px;
+      padding-right: 10px;
+    }
+    
+    mat-toolbar {
+      background-color: #212721;
+      color: #ffffff;
+    }
+    
+    .mat-headline {
+      font-size: 16px;
+      font-weight: 400;
+      margin-right: 10px;
+    }
+    
+    .mat-button {
+      font-size: 12px;
+      font-weight: 400;
+      opacity: .7; 
+    }
+  
+    .hideAdmin {
+      display: none;
+    }

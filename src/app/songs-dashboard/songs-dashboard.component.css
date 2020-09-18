@@ -1,0 +1,10 @@
+table, th, td{
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin: 2px;
+}
+
+mat-card-actions.mat-card-actions {
+    text-align: left;
+    margin: 2px;
+}
