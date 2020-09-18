@@ -2,8 +2,8 @@
 
 This is a multi-user web application that allows a user to manage their music library. 
 
-[BACKEND REPO:](https://github.com/takshil45/personalMusicLibraryBackend)
-[FRONTEND REPO:](https://github.com/takshil45/personalMusicLibraryFrontend)
+[BACKEND REPO LINK](https://github.com/takshil45/personalMusicLibraryBackend)  
+[FRONTEND REPO LINK](https://github.com/takshil45/personalMusicLibraryFrontend)
 
 ### Technology Stack
 
